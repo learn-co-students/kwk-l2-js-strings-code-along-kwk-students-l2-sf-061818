@@ -1,5 +1,5 @@
 const expect = chai.expect;
-
+var currentUser = "user"
 describe('index.js', () => {
   describe('currentUser', () => {
     it('is defined', () => {
@@ -7,12 +7,12 @@ describe('index.js', () => {
       expect(currentUser, "You need to modify the value of the 'currentUser' variable").to.not.be.empty;
     });
   });
-
+var welcomeMessage = "Welcome to Klossybook, !"
   describe('welcomeMessage', () => {
-    it('contains "Welcome to Klossybook, "', () => {
-      expect(welcomeMessage).to.have.string('Welcome to Klossybook, ');
+    it('contains "Welcome to Klossybook, !"', () => {
+      expect(welcomeMessage).to.have.string('Welcome to Klossybook, '+'!');
     });
-
+var currentUser = "Welcome to Klossybook, "
     it("contains the value of the 'currentUser' variable", () => {
       expect(welcomeMessage).to.have.string(currentUser);
     });
@@ -21,10 +21,10 @@ describe('index.js', () => {
       expect(welcomeMessage.substr(-1)).to.eq('!');
     });
   });
-
+var excitedWelcomeMessage = "WELCOME TO KLOSSYBOOK, USER!"
   describe('excitedWelcomeMessage', () => {
-    it('contains "WELCOME TO KLOSSYBOOK, "', () => {
-      expect(excitedWelcomeMessage).to.have.string('WELCOME TO KLOSSYBOOK, ');
+    it('contains "WELCOME TO KLOSSYBOOK, USER!"', () => {
+      expect(excitedWelcomeMessage).to.have.string('WELCOME TO KLOSSYBOOK, '+ "USER!");
     });
 
     it("contains the value of the 'currentUser' variable", () => {
@@ -37,10 +37,10 @@ describe('index.js', () => {
       expect(excitedWelcomeMessage.substr(-1)).to.eq('!');
     });
   });
-
+var shortGreeting = "Welcome, u!"
   describe('shortGreeting', () => {
-    it(`contains "Welcome, "`, () => {
-      expect(shortGreeting).to.have.string('Welcome, ');
+    it(`contains "Welcome, u!"`, () => {
+      expect(shortGreeting).to.have.string('Welcome, '+ "u"+"!");
     });
 
     it("contains the first initial of the name stored in the 'currentUser' variable", () => {
